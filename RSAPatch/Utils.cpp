@@ -7,22 +7,22 @@ HANDLE _in = NULL, _old_in = NULL;
 
 void Utils::AttachConsole()
 {
-    _old_out = GetStdHandle(STD_OUTPUT_HANDLE);
-    _old_err = GetStdHandle(STD_ERROR_HANDLE);
-    _old_in = GetStdHandle(STD_INPUT_HANDLE);
+//    _old_out = GetStdHandle(STD_OUTPUT_HANDLE);
+//    _old_err = GetStdHandle(STD_ERROR_HANDLE);
+//    _old_in = GetStdHandle(STD_INPUT_HANDLE);
+//
+//    ::AllocConsole() && ::AttachConsole(GetCurrentProcessId());
 
-    ::AllocConsole() && ::AttachConsole(GetCurrentProcessId());
+//    _out = GetStdHandle(STD_OUTPUT_HANDLE);
+//    _err = GetStdHandle(STD_ERROR_HANDLE);
+//    _in = GetStdHandle(STD_INPUT_HANDLE);
 
-    _out = GetStdHandle(STD_OUTPUT_HANDLE);
-    _err = GetStdHandle(STD_ERROR_HANDLE);
-    _in = GetStdHandle(STD_INPUT_HANDLE);
+//    SetConsoleMode(_out,
+//        ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);
 
-    SetConsoleMode(_out,
-        ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);
-
-    SetConsoleMode(_in,
-        ENABLE_INSERT_MODE | ENABLE_EXTENDED_FLAGS |
-        ENABLE_PROCESSED_INPUT | ENABLE_QUICK_EDIT_MODE);
+//    SetConsoleMode(_in,
+//        ENABLE_INSERT_MODE | ENABLE_EXTENDED_FLAGS |
+//        ENABLE_PROCESSED_INPUT | ENABLE_QUICK_EDIT_MODE);
 }
 
 void Utils::DetachConsole()

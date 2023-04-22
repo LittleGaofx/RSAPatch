@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="detours.h" />
     <ClInclude Include="exports.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="detours.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RSAPatch.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
